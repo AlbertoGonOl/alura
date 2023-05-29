@@ -1,0 +1,65 @@
+<meta charset="UTF-8">
+
+<h1>Inicio de Sesion</h1>
+<br>
+<h2>checar notas dentro del codigo</h2>
+
+<script>
+
+	function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+
+    function imprimir(frase) {
+
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+        
+    }
+
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+
+
+    for (var intentos = 1; intentos <= 3; intentos++) {
+
+
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+
+        if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+
+            alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+            break;
+
+        }
+
+        else {
+
+            if (intentos == 3) {
+
+                alert('Agotaste el numero permitido de intentos');
+                
+            }
+
+            else {
+
+                alert("inicio de sesión inválido. Favor intente de nuevo");
+
+            }
+
+        }
+
+    }
+
+
+</script>

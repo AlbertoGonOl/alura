@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<h1>Estrellas</h1>
+<br>
+<h2>checar notas dentro del codigo</h2>
+
+<script>
+
+	function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+
+    function imprimir(frase) {
+
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+        
+    }
+
+    var x = parseInt(prompt('Ingrese cuantas lineas desea imprimir:'));
+    var y = parseInt(prompt('Ingrese cuantas columnas de estrellas desea imprimir:'));
+
+    for (var lineas = 1; lineas <= x; lineas++) {
+
+        document.write(lineas + '.- ');
+
+        for (var columnas = 1; columnas <= y; columnas++) {
+
+            document.write('*');
+        }
+
+        saltarLinea();
+
+    }
+
+
+</script>

@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<h1>Pares del 1 al 100</h1>
+<br>
+<h2>checar notas dentro del codigo</h2>
+
+<script>
+
+
+    function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+
+    function imprimir(frase) {
+
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+        
+    }
+
+
+    var contador = 2;
+    var totalNum = parseInt(prompt('Ingrese hasta que numero desea imprimir:'));
+
+
+    while (contador <= totalNum) {
+
+        imprimir(contador);
+        contador = contador + 2;
+
+    }
+
+    imprimir('FIN');
+
+
+</script>

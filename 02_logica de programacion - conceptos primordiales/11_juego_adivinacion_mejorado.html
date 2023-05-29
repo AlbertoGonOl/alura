@@ -1,0 +1,70 @@
+<meta charset="UTF-8">
+
+<h1>Juego Adivinacion mejorado</h1>
+<br>
+<h2>checar notas dentro del codigo</h2>
+
+<script>
+
+	function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+
+    function imprimir(frase) {
+
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+        
+    }
+
+
+    var numeroMayor = parseInt(prompt('Ingrese el numero maximo a adivinar:'));
+    var numeroSistema = Math.round(Math.random() * numeroMayor);
+    var intentos = parseInt(prompt('Ingrese la cantidad de intentos que desea tener para adivinar:'));
+    var contador = 1;
+
+
+    while (contador <= intentos) {
+
+        var numeroLanzado = parseInt(prompt('Ingrese un numero entre 0 - ' + numeroMayor));
+
+        if(numeroSistema == numeroLanzado) {
+
+            alert('Usted acertó en el intento ' + contador + ', el numero pensado era: ' + numeroSistema);
+            break;
+
+        }
+
+        else {
+
+            alert('Usted erró');
+
+        }
+
+        contador++;
+
+    }
+
+
+    if(numeroSistema == numeroLanzado) {
+
+        imprimir('Usted acertó en el intento ' + contador + ', el numero pensado era: ' + numeroSistema);
+
+    }
+
+    else {
+
+        imprimir('Usted erró, el numero pensado era: ' + numeroSistema);
+
+    }
+
+
+</script>

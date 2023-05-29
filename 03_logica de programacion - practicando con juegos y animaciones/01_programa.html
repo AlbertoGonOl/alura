@@ -1,0 +1,49 @@
+<canvas width="600" height="400"></canvas>
+
+
+<script>
+
+	var pantalla = document.querySelector('canvas');
+	var pincel = pantalla.getContext('2d');
+
+
+	pincel.fillStyle = 'lightgrey';
+	//propiedad
+	pincel.fillRect(0,0,600,400);
+	//funcion
+	//fillRect es para crear un rectangulo, y se le da de primer parametro la posicion inicial donde se empieza el rectangulo
+	//los siguientes parametros son para definir el fin del rectangulo (hasta donde llega)
+
+
+	pincel.fillStyle = 'green';
+	pincel.fillRect(0,0,200,400);
+
+
+	pincel.fillStyle = 'red';
+	pincel.fillRect(400,0,600,400);
+
+
+	pincel.fillStyle = 'yellow';
+	pincel.beginPath();
+	//es una instruccion para iniciar un 'camino o linea'
+	pincel.moveTo(300,200);
+	//posicionamos el pincel donde queremos que empiece a trasar
+	pincel.lineTo(200,400);
+	//creamos la linea a la posicion deseada
+	pincel.lineTo(400,400);
+	//la segunda linea trazada empieza en el punto deonde se MOVIO (moveTo) el path, no donde termino la ultima linea
+	pincel.fill();
+	//se rellena y une todos los puntos
+
+
+	pincel.fillStyle = 'blue';
+	pincel.beginPath();
+	pincel.arc(300,200,50,0,2*3.14);
+	//el (.arc) sirve para crear circulos o arcos
+	//se la da la posicion inicial (las primeras dos coordenadas en x y y)
+	//el segundo parametro es el DIAMETRO
+	//el tercer parmetro es el angulo inicial
+	//el ultimo parametro es el angulo final
+	pincel.fill();
+
+</script>

@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+
+<h1>calcular IMC</h1>
+<br>
+<h2>checar notas dentro del codigo</h2>
+
+<script>
+
+	function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+
+    function imprimir(frase) {
+
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+        
+    }
+
+
+    var numeroSistema = Math.round(Math.random() * 10);
+    var numeroLanzado = parseInt(prompt('Ingrese un numero entre 0 - 10'));
+
+
+    if(numeroSistema == numeroLanzado) {
+        imprimir('Usted acertó');
+    }
+
+    else {
+        imprimir('Usted erró, el número pensado era: ' + numeroSistema);
+    }
+
+    /*if(numeroSistema == numeroLanzado) {
+        imprimir('Usted acertó');
+    } else {
+        imprimir('Usted erró, el número pensado era: ' + numeroSistema);
+    }*/
+    //tambien se puede estructurar como el comentario de arriba
+
+</script>

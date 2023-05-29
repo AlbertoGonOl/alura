@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<h2>checar notas dentro del codigo</h2>
+
+<script>
+
+	/*
+	alert("La edad de Alberto es ...")
+	alert("?")
+	*/
+
+
+	//podemos escribir html dentro del codigo de js
+	/* esto se hace de la
+	siguiente manera: */
+	document.write("La edad de Alberto es ...")
+	document.write("<br>")
+	document.write('24')
+	document.write("<br>")
+	document.write(24)	//al quitarle las comilas hacemos que js lo tome como un numero y no una string (texto)
+	document.write("<br>")
+	document.write(11+13)	//al ser considerado un numero ya se puede operar con este
+	document.write("<br>")
+	document.write('20'+'15')	//lo que hace js es juntar ambos strings, porque un string esta entre comillas (se llama concatenar, que significa juntar dos strings o textos en uno solo)
+	document.write("<br>")
+	document.write('2'+'2'-'2')		//un error propio de js
+	/* esto ayuda a no tener puro pop-up
+	dentro de la pagina */
+</script>

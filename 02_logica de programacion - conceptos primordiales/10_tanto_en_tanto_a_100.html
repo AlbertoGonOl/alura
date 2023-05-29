@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<h1>Tanto en tanto hasta 100</h1>
+<br>
+<h2>checar notas dentro del codigo</h2>
+
+<script>
+
+
+    function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+
+    function imprimir(frase) {
+
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+        
+    }
+
+
+    var contador = 0;
+    var incremento = parseInt(prompt('Indique de cuanto en cuanto incrementar el numero:'))
+    var totalNum = parseInt(prompt('Ingrese hasta que numero desea imprimir:'));
+
+
+    while (contador <= totalNum) {
+
+        imprimir(contador);
+        contador = contador + incremento;
+
+    }
+
+    imprimir('FIN');
+
+
+</script>

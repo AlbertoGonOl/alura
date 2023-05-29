@@ -1,0 +1,50 @@
+<meta charset="UTF-8">
+
+<h1>calcular IMC</h1>
+<br>
+<h2>checar notas dentro del codigo</h2>
+
+<script>
+
+    var pesoAlberto = 60;
+    var alturaAlberto = 1.70;
+
+
+	function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+
+    };
+
+
+    function imprimir(frase) {
+
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+        
+    };
+
+
+    function calcularIMC(peso, altura) {
+
+    	var imc = peso / (altura * altura);
+    	return(imc);
+
+    };
+
+
+    var imcAlberto = calcularIMC(60, 1.70);
+    var imcAlonso = calcularIMC(70, 1.75);
+    var imcPromedio = (imcAlberto + imcAlonso) / 2;
+
+
+    imprimir('El IMC de Alberto y Alonso es de: ' + Math.round(imcPromedio));
+    imprimir('El imc del Don y la Gfa es de: ' + Math.round((calcularIMC(75, 1.73) + calcularIMC(90, 1.50)) / 2));
+    // aqui se muestran las dos diferentes formas de realizar el mismo proceso, uno con variables, y el otro calulando dentro del mismo imprimir
+
+</script>

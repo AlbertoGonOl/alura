@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<h1>calcular IMC</h1>
+<br>
+<h2>checar notas dentro del codigo</h2>
+
+<script>
+
+	function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+
+    };
+
+
+    function imprimir(frase) {
+
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+        
+    };
+
+
+    function calcularIMC(peso, altura) {
+
+    	return(peso / (altura * altura));
+
+    };
+
+    var nombreP = prompt('Ingrese su nombre de favor:');
+    var peso1 = prompt(nombreP + ', favor de ingresar su peso en kg:');
+    var altura1 = prompt(nombreP + ', favor de ingresar su altura en m:');
+    imprimir(nombreP + ', su indice de masa corporal es de: ' + Math.round(calcularIMC(peso1, altura1)));
+
+</script>

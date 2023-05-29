@@ -1,0 +1,69 @@
+<meta charset="UTF-8">
+
+<h1>calcular IMC</h1>
+<br>
+<h2>checar notas dentro del codigo</h2>
+
+<script>
+
+	function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+
+    };
+
+    function imprimir(frase) {
+
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+        
+    };
+
+
+    var pesoAlberto = 60;
+    var alturaAlberto = 1.70;
+    var imcAlberto = pesoAlberto / (alturaAlberto * alturaAlberto);
+
+    saltarLinea();
+    imprimir('El IMC de Alberto es de: ' + imcAlberto);
+    imprimir('El IMC de Alberto es de: ' + Math.round(imcAlberto));
+    saltarLinea();
+
+
+
+    function calcularIMCreturn(peso, altura) {
+
+        imc = peso / (altura * altura);
+        return(imc);
+
+    };
+
+    imcAlonso = calcularIMCreturn(75, 1.70);
+    imprimir('El IMC de Alonso es: ' + imcAlonso);
+    imcPompi = calcularIMCreturn(75, 1.71);
+    imprimir('El IMC de Pompi es: ' + imcPompi);
+    saltarLinea();
+    // aqui ocupamos el return cuando no imprimimos las cosas directamente en la funcion
+    // hacemos la operacion y pedimos que el resultado de la funcion se regrese (return)
+
+
+
+
+    function calcularIMC(nombre, peso, altura) {
+
+    	var imc = peso / (altura * altura);
+    	imprimir('El IMC de ' + nombre + ' es de: ' + Math.round(imc));
+
+    };
+
+    calcularIMC('pepe', 50, 1.50);
+    calcularIMC('juan', 30, 1.70);
+    calcularIMC('alberto', pesoAlberto, alturaAlberto);
+    // podemos observar que como parametro se puden dar los valores especificos asi como variables
+
+</script>

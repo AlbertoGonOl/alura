@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+
+<h1>calcular IMC</h1>
+<br>
+<h2>checar notas dentro del codigo</h2>
+
+<script>
+
+	function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+
+    };
+
+
+    function imprimir(frase) {
+
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+        
+    };
+
+
+    function calcularIMC(peso, altura) {
+
+    	return(peso / (altura * altura));
+
+    };
+
+    var nombreP = prompt('Ingrese su nombre de favor:');
+    var peso1 = prompt(nombreP + ', favor de ingresar su peso en kg:');
+    var altura1 = prompt(nombreP + ', favor de ingresar su altura en m:');
+    var imcCalculado = calcularIMC(peso1, altura1);
+    imprimir(nombreP + ', su indice de masa corporal es de: ' + imcCalculado);
+
+
+    if(imcCalculado < 18.5) {
+        imprimir(nombreP + ', usted es considerado como bajo peso por la OMS');
+    }
+
+    if(imcCalculado >= 18.5 && imcCalculado < 25) {
+        imprimir(nombreP + ', usted es considerado como normal por la OMS');
+    }
+
+    if(imcCalculado >= 25) {
+        if(imcCalculado < 30) {
+            imprimir(nombreP + ', usted es considerado con sobrepeso por la OMS');
+        }
+    }
+
+    if(imcCalculado > 30) {
+        imprimir(nombreP + ', usted es considerado con obesidad por la OMS');
+    }
+
+</script>
